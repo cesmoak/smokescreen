@@ -1,0 +1,12 @@
+Smokescreen Player - A Flash player written in Javascript
+http://smokescreen.us/
+
+Copyright 2011, Chris Smoak
+Released under the MIT License.
+http://www.opensource.org/licenses/mit-license.php
+
+To see an example:
+
+- Start a web server serving this directory
+- Browse to player.html
+

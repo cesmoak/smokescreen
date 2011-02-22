@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript" src="src/require.js"></script>
+    </head>
+    <body>
+        <button id="toggle">Toggle Play/Pause</button>
+        <div id="player"></div>
+        <script type="text/javascript">
+            require({baseUrl: "src"}, ["player/player"], function(p) {
+                // the player constructor
+                var Player = p.Player
+                // the url to play
+                var url = "swf/example1.swf"
+                // the container element to use
+                var container = document.getElementById("player")
+                // create the player
+                var player = new Player()
+                // play the swf
+                player.run(url, container)
+
+                // toggle the player playing
+                document.getElementById('toggle').addEventListener('click', function(e) {
+                    if (player.playing) {
+                        player.pause()
+                    }
+                    else {
+                        player.play()
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
